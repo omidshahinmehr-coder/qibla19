@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qibla &amp; Prayer Times</string>
+
+    <!-- Home screen -->
+    <string name="home_title">Qibla &amp; Prayer Times</string>
+    <string name="home_subtitle">Calculated using the University of Tehran method</string>
+    <string name="nav_alarms">Adhan alarms</string>
+    <string name="nav_monthly">Monthly table</string>
+    <string name="nav_about">About</string>
+    <string name="nav_theme_toggle">Switch light/dark appearance</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+
+    <!-- Compass -->
+    <string name="compass_locate_me">My current location</string>
+    <string name="compass_add_from_map">Add from map</string>
+    <string name="compass_live_caption"></string>
+    <string name="compass_static_caption">From north, clockwise</string>
+    <string name="compass_distance">Distance to the Kaaba: %1$d km</string>
+    <string name="dir_n">N</string>
+    <string name="dir_ne">NE</string>
+    <string name="dir_e">E</string>
+    <string name="dir_se">SE</string>
+    <string name="dir_s">S</string>
+    <string name="dir_sw">SW</string>
+    <string name="dir_w">W</string>
+    <string name="dir_nw">NW</string>
+
+    <!-- Prayer times card -->
+    <string name="prayer_times_title">Today\'s Prayer Times</string>
+    <string name="offline_approx_badge">Offline · approximate</string>
+    <string name="approx_suffix"> (approximate)</string>
+    <string name="loading_times">Fetching prayer times…</string>
+    <string name="method_note">Calculated using the "Institute of Geophysics, University of Tehran" method (Fajr angle 17.7°, Isha angle 14°).</string>
+
+    <!-- Prayer names -->
+    <string name="prayer_imsak">Imsak</string>
+    <string name="prayer_fajr">Fajr</string>
+    <string name="prayer_sunrise">Sunrise</string>
+    <string name="prayer_dhuhr">Dhuhr</string>
+    <string name="prayer_asr">Asr</string>
+    <string name="prayer_sunset">Sunset</string>
+    <string name="prayer_maghrib">Maghrib</string>
+    <string name="prayer_isha">Isha</string>
+    <string name="prayer_midnight">Midnight</string>
+    <string name="prayer_times_error">Getting prayer times failed, both online and offline.</string>
+
+    <!-- City picker -->
+    <string name="city_picker_title">Choose a city</string>
+    <string name="city_search_placeholder">Search for a city name…</string>
+    <string name="city_local_results">Matches in your city list</string>
+    <string name="city_online_search">Online search</string>
+    <string name="city_searching">Searching…</string>
+    <string name="city_no_results">No results found (or no internet connection).</string>
+    <string name="city_my_cities">My cities</string>
+    <string name="city_default_cities">Default cities</string>
+    <string name="delete">Delete</string>
+
+    <!-- Map / manual coordinate picker -->
+    <string name="map_add_city_title">Add a new city</string>
+    <string name="map_mode_map">On the map</string>
+    <string name="map_mode_manual">Enter coordinates</string>
+    <string name="map_tap_hint">Tap on the map. A coordinate grid is shown even with no internet.</string>
+    <string name="map_content_desc">World map</string>
+    <string name="map_coords_display">Latitude %1$.2f — Longitude %2$.2f</string>
+    <string name="default_city_name">Custom city</string>
+    <string name="manual_hint">Latitude between -90 and 90, longitude between -180 and 180 (works fully offline).</string>
+    <string name="manual_lat_label">Latitude</string>
+    <string name="manual_lon_label">Longitude</string>
+    <string name="manual_error_invalid">Please enter a valid number.</string>
+    <string name="manual_error_lat_range">Latitude must be between -90 and 90.</string>
+    <string name="manual_error_lon_range">Longitude must be between -180 and 180.</string>
+    <string name="city_name_placeholder">Enter a city name</string>
+    <string name="add_button">Add</string>
+    <string name="grid_equator_label">0°</string>
+    <string name="grid_north_label">90 N</string>
+    <string name="grid_south_label">90 S</string>
+
+    <!-- Alarm settings -->
+    <string name="alarms_title">Adhan Alarms</string>
+    <string name="alarms_subtitle">Turn on a reminder for each prayer and pick the sound you want.</string>
+    <string name="choose_sound_for">Choose sound for %1$s</string>
+    <string name="choose_adhan_sound">Choose adhan sound</string>
+    <string name="device_ringtones">Device ringtones</string>
+    <string name="audio_file">Audio file from storage</string>
+    <string name="reminder_before_label">Reminder before adhan:</string>
+    <string name="reminder_minutes_before">%1$d min before</string>
+    <string name="reminder_off">Off</string>
+    <string name="exact_alarm_banner">For precise adhan timing, enable "exact alarm scheduling" in Android settings.</string>
+    <string name="open_settings">Open settings</string>
+
+    <!-- About -->
+    <string name="about_title">About the App</string>
+    <string name="designer_label">Designer &amp; Developer</string>
+    <string name="designer_name">Omid Shahinmehr</string>
+    <string name="version_label">Version %1$s</string>
+    <string name="about_footer">Prayer times are calculated using the "Institute of Geophysics, University of Tehran" method.\nQibla direction and distance to the Kaaba are calculated locally, with no internet required.</string>
+
+    <!-- Monthly table -->
+    <string name="monthly_title">Monthly Prayer Times</string>
+    <string name="monthly_offline_note">This table was calculated offline and is approximate.</string>
+    <string name="col_day">Day</string>
+    <string name="col_fajr">Fajr</string>
+    <string name="col_dhuhr">Dhuhr</string>
+    <string name="col_asr">Asr</string>
+    <string name="col_maghrib">Maghrib</string>
+    <string name="col_isha">Isha</string>
+    <string name="prev_month">Previous month</string>
+    <string name="next_month">Next month</string>
+
+    <!-- Notifications -->
+    <string name="adhan_time_title">It\'s time for %1$s</string>
+    <string name="adhan_tap_to_stop">Tap to stop the sound</string>
+    <string name="stop_sound_action">Stop sound</string>
+    <string name="adhan_channel_name">Adhan</string>
+    <string name="adhan_channel_desc">Prayer time alerts</string>
+    <string name="reminder_notif_title">%1$d minutes until %2$s</string>
+    <string name="reminder_notif_text">It\'s almost time to prepare for prayer.</string>
+    <string name="reminder_channel_name">Reminder before adhan</string>
+    <string name="reminder_channel_desc">A reminder a few minutes before each adhan</string>
+
+    <!-- Widget -->
+    <string name="widget_default_title">Qibla &amp; Prayer Times</string>
+    <string name="widget_offline_tag"> · offline</string>
+    <string name="widget_updating">Updating…</string>
+    <string name="widget_open_app_hint">Open the app to show prayer times here</string>
+    <string name="hijri_era_suffix"> AH</string>
+    <string name="current_location_name">Current location</string>
+    <string name="menu">Menu</string>
+    <string name="menu_title">Menu</string>
+    <string name="menu_language">App language</string>
+    <string name="language_title">Choose language</string>
+    <string name="language_system">Follow system language</string>
+    <string name="language_en">English</string>
+    <string name="language_fa">فارسی</string>
+    <string name="language_ar">العربية</string>
+    <string name="city_choose_from_list">Choose from list</string>
+    <string name="city_current_location">Current location</string>
+    <string name="city_choose_from_map">Choose from map</string>
+    <string name="city_manual_entry">Enter manually</string>
+    <string name="city_name_prompt_title">What should we call this place?</string>
+    <string name="city_name_prompt_hint">e.g. My home</string>
+    <string name="select_button">Select</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="getting_location">Getting your location…</string>
+    <string name="countdown_hours_minutes">%1$dh %2$dm</string>
+    <string name="countdown_minutes">%1$dm</string>
+    <string name="widget_countdown_label">Time remaining until %1$s</string>
+    <string name="col_sunrise">Sunrise</string>
+    <string name="col_sunset">Sunset</string>
+    <string name="menu_theme">Appearance</string>
+    <string name="theme_title">Choose appearance</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="offline_explanation">No internet connection was available, so these prayer times were calculated locally on your device using the same astronomical method — they\'re approximate and may differ by a minute or two from the online result.</string>
+    <string name="refresh_times">Refresh</string>
+    <string name="menu_hijri_correction">Hijri date correction</string>
+    <string name="hijri_correction_title">Hijri date correction</string>
+    <string name="hijri_correction_explanation">The Hijri date is calculated, not read off a network source, so it can be a day or two off from the date officially announced where you live. Use this to shift it to match.</string>
+    <string name="hijri_correction_preview_label">Hijri date shown in the app</string>
+    <string name="hijri_correction_offline_note">Currently offline — this is the local calculation, same as what the app is showing right now.</string>
+    <string name="hijri_correction_uncorrected">Without correction: %1$s</string>
+    <string name="hijri_correction_decrease">Decrease by one day</string>
+    <string name="hijri_correction_increase">Increase by one day</string>
+    <string name="hijri_correction_days_label">Correction: %1$d day(s)</string>
+    <string name="hijri_correction_reset">Reset to no correction</string>
+    <string name="menu_prayer_method">Prayer time calculation method</string>
+    <string name="prayer_method_title">Calculation method</string>
+    <string name="prayer_method_tehran">Institute of Geophysics, University of Tehran</string>
+    <string name="prayer_method_tehran_desc">Fajr 17.7°, Isha 14°, Maghrib 4.5° after sunset. This app\'s default.</string>
+    <string name="prayer_method_jafari">Ja\'fari (Shia Ithna-Ashari)</string>
+    <string name="prayer_method_jafari_desc">Fajr 16°, Isha 14°, Maghrib 4° after sunset — the convention used in Shia jurisprudence.</string>
+    <string name="next_prayer_countdown">%1$s in %2$s</string>
+</resources>

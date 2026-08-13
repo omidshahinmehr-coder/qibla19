@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Pick Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        html, body, #map { height: 100%; margin: 0; padding: 0; }
+
+        #confirmButton {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: #C9A15C;
+            color: #0C1A2B;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: sans-serif;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        #coordsLabel {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #1F2937;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="coordsLabel">—</div>
+    <button id="confirmButton">✓</button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map');
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Default view (Tehran) until Android calls setInitialLocation().
+        var currentLat = 35.7219;
+        var currentLng = 51.3347;
+        map.setView([currentLat, currentLng], 15);
+
+        var marker = L.marker([currentLat, currentLng], { draggable: true }).addTo(map);
+
+        function updateLabel(lat, lng) {
+            document.getElementById('coordsLabel').innerText = lat.toFixed(5) + ', ' + lng.toFixed(5);
+        }
+        updateLabel(currentLat, currentLng);
+
+        function moveMarkerTo(lat, lng) {
+            currentLat = lat;
+            currentLng = lng;
+            marker.setLatLng([lat, lng]);
+            updateLabel(lat, lng);
+        }
+
+        // Tap anywhere on the map to move the pin there.
+        map.on('click', function (e) {
+            moveMarkerTo(e.latlng.lat, e.latlng.lng);
+        });
+
+        // Dragging the pin itself also updates the coordinates.
+        marker.on('dragend', function () {
+            var pos = marker.getLatLng();
+            moveMarkerTo(pos.lat, pos.lng);
+        });
+
+        // Called from Android once the current/initial location is known.
+        function setInitialLocation(lat, lng) {
+            map.setView([lat, lng], 16);
+            moveMarkerTo(lat, lng);
+        }
+
+        document.getElementById('confirmButton').addEventListener('click', function () {
+            AndroidBridge.onLocationPicked(currentLat, currentLng);
+        });
+    </script>
+</body>
+</html>

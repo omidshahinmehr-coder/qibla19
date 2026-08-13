@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Plain-weight text row used inside the widgets for anything that needs the app's estedad
+    font. Glance's own Text() composable can only pick from a few generic system font families
+    (sans-serif, serif, monospace, cursive) — it can't embed a bundled .ttf — so, the same way
+    this project already does for the clock (widget_clock.xml) and the countdown
+    (widget_countdown.xml), this is inflated as a real RemoteViews layout via
+    AndroidRemoteViews, which *can* reference @font resources from this package.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/estedad"
+    android:includeFontPadding="false" />

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Bold variant of widget_text_estedad.xml. estedad.ttf only ships a single (regular) weight,
+    so android:textStyle="bold" here synthesizes bold the same way Compose does in the rest of
+    the app (see ui/theme/Theme.kt, where every Material type scale entry uses the same single
+    estedad FontFamily and lets FontWeight.Bold fake-embolden it) — this keeps the widget's bold
+    text visually consistent with the in-app UI.
+-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/estedad"
+    android:textStyle="bold"
+    android:includeFontPadding="false" />
