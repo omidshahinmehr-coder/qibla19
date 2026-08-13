@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qibla Watch</string>
+    <string name="wear_finding_location">Locating…</string>
+    <string name="wear_permission_needed">Location permission is needed to find the qibla direction.</string>
+    <string name="wear_grant_permission">Grant</string>
+    <string name="wear_no_location">Couldn\'t get a location fix. Move outdoors and try again.</string>
+    <string name="wear_retry">Retry</string>
+    <string name="wear_no_compass">This watch has no compass sensor.</string>
+    <string name="wear_distance_km">%1$d km to the Kaaba</string>
+</resources>
