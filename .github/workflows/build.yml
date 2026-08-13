@@ -1,0 +1,54 @@
+name: Build APKs
+
+# Runs on every push/PR to main, and can also be triggered manually from the Actions tab.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # Provisions Gradle itself and caches dependencies/build state between runs.
+      # NOTE: once gradle/wrapper/gradle-wrapper.jar has been committed to the repo (see the
+      # setup note in TECHNICAL_DOCUMENTATION.docx), you can switch every `gradle` call below
+      # back to `./gradlew` and drop the `gradle-version:` line — this action supports both.
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      # Builds the phone app's debug + unsigned-release APKs (module :app).
+      - name: Build phone app (:app)
+        run: gradle :app:assembleDebug :app:assembleRelease
+
+      # Builds the watch app's debug + unsigned-release APKs (module :wear).
+      - name: Build watch app (:wear)
+        run: gradle :wear:assembleDebug :wear:assembleRelease
+
+      - name: Upload phone app APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: qibla-phone-apks
+          path: app/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
+      - name: Upload watch app APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: qibla-watch-apks
+          path: wear/build/outputs/apk/**/*.apk
+          if-no-files-found: error
